@@ -1,0 +1,8 @@
+Persistence\Profil.class
+Service\ProfilServiceLocal.class
+Service\ProfilService.class
+Persistence\Publications.class
+Service\PublicationService.class
+Persistence\Blog.class
+Service\BlogService.class
+Service\PublicationServiceLocal.class

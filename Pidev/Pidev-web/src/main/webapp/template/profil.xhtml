@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+		<ui:define name="title">GED || Profil</ui:define>
+		<ui:define name="main">
+			<!-- Linna t7ot el corps (body) mta3 el profile -->
+			<center>
+				<h1>Creer votre profil</h1>
+			</center>
+			<div class="col-12">
+				<div class="card card-shadowed px-50 py-30 w-400px mx-auto"
+					style="max-width: 100%">
+
+					<h:form class="form-type-material">
+					
+					
+						<div class="form-group">
+
+							<h:outputText value="Nom" />
+							<h:inputText class="form-control"
+								value="#{profilBean.profil.nom}" />
+
+						</div>
+						<div class="form-group">
+							<h:outputText value="Prenom" />
+							<h:inputText class="form-control"
+								value="#{profilBean.profil.prenom}" />
+						</div>
+						<div class="form-group">
+							<h:outputText value="Email" type="email"/>
+							<h:inputText class="form-control" 
+								value="#{profilBean.profil.email}" />
+						</div>
+						<div class="form-group">
+							<h:outputText value="Datenaissance" />
+							<h:inputText class="form-control" 
+								value="#{profilBean.profil.date_naissance}" >
+						  	<f:convertDateTime pattern="dd-MM-yyyy"/> 
+						  	</h:inputText>
+						</div>
+
+						<div class="form-group">
+							<h:outputText value="telephone" />
+							<h:inputText class="form-control"
+								value="#{profilBean.profil.telephone}" />
+						</div>
+						<div class="form-group">
+							<h:outputText value="Image" />
+							<h:inputText class="form-control"
+								value="#{profilBean.profil.image}" />
+						</div>
+						<div>
+						<h:commandButton value="Save" 
+							class="btn btn-bold btn-block btn-primary" action="#{profilBean.doSave()}" />
+							</div>
+					</h:form>
+
+				</div>
+			</div>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+</h:html>
